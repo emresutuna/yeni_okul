@@ -35,10 +35,7 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(compose.preview)
-            implementation(libs)
-        }
-        iosMain.dependencies {
-            implementation(libs.versions.ktor.client.darwin)
+            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -55,6 +52,11 @@ kotlin {
             implementation(libs.androidx.navigation.compose)
             implementation(libs.coil.compose)
             implementation(libs.coil.network.ktor)
+            implementation(compose.material3)
+
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
@@ -93,6 +95,7 @@ android {
     }
     dependencies {
         debugImplementation(compose.uiTooling)
+         implementation("io.ktor:ktor-client-core:3.0.0-wasm2")
     }
 }
 

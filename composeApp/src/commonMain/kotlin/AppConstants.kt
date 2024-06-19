@@ -1,0 +1,1 @@
+const val BACK_CLICK_ROUTE = "BACK_CLICK_ROUTE"
